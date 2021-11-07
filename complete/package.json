@@ -1,0 +1,48 @@
+{
+	"name": "art-image-api",
+	"version": "1.0.0",
+	"description": "Art Image API that handles resizing of images.",
+	"main": "src/app.ts",
+	"scripts": {
+		"build": "tsc",
+		"heroku-postbuild": "npm run build",
+		"start": "nodemon",
+		"inspect": "nodemon --inspect src/app.ts",
+		"test": "jest",
+		"lint": "npm run lint:js ",
+		"lint:eslint": "eslint --ignore-path .gitignore --ext .ts",
+		"lint:js": "npm run lint:eslint src/",
+		"lint:fix": "npm run lint:js -- --fix"
+	},
+	"dependencies": {
+		"celebrate": "^13.0.3",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"errorhandler": "^1.5.1",
+		"express": "^4.17.1",
+		"method-override": "^3.0.0",
+		"morgan": "^1.10.0",
+		"sharp": "^0.29.2",
+		"typedi": "^0.8.0",
+		"winston": "^3.3.3"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.13",
+		"@types/jest": "^26.0.14",
+		"@types/node": "^14.17.32",
+		"@types/sharp": "^0.29.3",
+		"@typescript-eslint/eslint-plugin": "^4.2.0",
+		"@typescript-eslint/parser": "^4.2.0",
+		"eslint": "^7.9.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"jest": "^26.4.2",
+		"nodemon": "^2.0.4",
+		"prettier": "^2.1.2",
+		"ts-jest": "^26.4.0",
+		"ts-node": "^9.0.0",
+		"tsconfig-paths": "^3.11.0",
+		"tslint": "^5.20.1",
+		"typescript": "^4.0.3"
+	}
+}
